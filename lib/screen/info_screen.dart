@@ -30,7 +30,7 @@ class _InfoScreenState extends State<InfoScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Details'),
+        title: Text('Your Details',style: TextStyle(fontWeight: FontWeight.normal,fontSize: 21.0),),
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Center(
@@ -41,7 +41,7 @@ class _InfoScreenState extends State<InfoScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Welcome, ${widget.name}',
+                'Welcome, Flutter  Developer.',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 32,
@@ -52,18 +52,23 @@ class _InfoScreenState extends State<InfoScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
+                    'Name'':- ${widget.name}',
+                    style: TextStyle(color: Colors.black, fontSize: 25,fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20),
+                  Text(
                     'Email:- ${widget.email}',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(color: Colors.black, fontSize: 25,fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 20),
                   Text(
                     'PRN:- ${widget.prn}',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(color: Colors.black, fontSize: 25,fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 20),
                   Text(
                     'Gender:- $gender',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(color: Colors.black,fontSize: 25,fontWeight: FontWeight.bold),
                   ),
                 ],
               )

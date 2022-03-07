@@ -29,9 +29,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Assignment 3'),
+        title: Text('Assignment 3',style: TextStyle(fontWeight: FontWeight.w700,color: Colors.black87),),
         centerTitle: true,
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.lightGreen,
       ),
       body: Center(
         child: Padding(
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                   textInputAction: TextInputAction.next,
                   keyboardType: TextInputType.name,
                   decoration: kTextFormFieldDec.copyWith(
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.person,color: Colors.black45,),
                     hintText: 'Name',
                   ),
                 ),
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                   textInputAction: TextInputAction.next,
                   keyboardType: TextInputType.emailAddress,
                   decoration: kTextFormFieldDec.copyWith(
-                    prefixIcon: Icon(Icons.email),
+                    prefixIcon: Icon(Icons.email,color: Colors.black45,),
                     hintText: 'Email',
                   ),
                 ),
@@ -82,18 +82,20 @@ class _HomePageState extends State<HomePage> {
                   },
                   textInputAction: TextInputAction.done,
                   decoration: kTextFormFieldDec.copyWith(
-                    prefixIcon: Icon(Icons.shield),
+                    prefixIcon: Icon(Icons.shield,color: Colors.black45,),
                     hintText: 'PRN',
                   ),
                 ),
               ),
               SizedBox(height: 10),
-              Text('Choose your Gender'),
+              Text('Choose your Gender',
+              style: TextStyle(fontSize: 17.0),),
+
               Row(
                 children: [
                   Radio(
                     value: 1,
-                    activeColor: Colors.lightBlueAccent,
+                    activeColor: Colors.pinkAccent,
                     onChanged: (value) {
                       setState(() {
                         setSelectedRadio(value);
@@ -101,16 +103,16 @@ class _HomePageState extends State<HomePage> {
                     },
                     groupValue: isMale,
                   ),
-                  Text('Male'),
+                  Text('Male',style: TextStyle(fontSize: 18.0),),
                   Radio(
                     value: 2,
-                    activeColor: Colors.lightBlueAccent,
+                    activeColor: Colors.pinkAccent,
                     groupValue: isFemale,
                     onChanged: (value) {
                       setSelectedRadio(value);
                     },
                   ),
-                  Text('Female'),
+                  Text('Female',style: TextStyle(fontSize: 18.0),),
                 ],
               ),
               SizedBox(height: 20),
@@ -134,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                     height: 45,
                     width: MediaQuery.of(context).size.width * 0.3,
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Colors.red,
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Text(
